@@ -1,0 +1,25 @@
+this is kind of algorithm for tis program:
+1. import necessary libs such as curses
+2. stdscr :  wrapper gives us a screen so that standard screen is shown
+3. we pass main function in wrapper function so that it can initialize all the stuff related to curses
+4.we need to clear & refresh the screen so use stdscr.clear/ refresh function
+5. getkey(): we need to see the output so we wait for user to press any key 
+6.we need to define some colors for show in screen wrapper
+7.in addstr(x,y) we pass the coordinates so that our string printed at the coordinates 
+8.we define another function start_screen() to show initialization of our program to user
+9.and call this function in main() 
+10. define another functon wpm_test() to give the content to type and  show the speed of typing 
+11. we use While loop to keep pressing the keys that are in content and append these keys to complete the sentences.
+12.every single char user type is stored in list current_text[] 
+and  we decare for loop in the while loop so that if the char is wrong then it display the redcolor.
+13.and we constantly clear and refresh the screen every time while loop run
+14. we add escape of the program
+we check if user type esc key the program is quit& we ut this logic just after for loop
+15 we also add some more keys like backspace means an element is popped out from the list we add this logic also wth above logic
+16.we add a function display_text to display some important info like current text , target text, wpm, stdscr 
+17. we use enumerate to count & for loop to print exact same amount of character in the content
+we check length of the current txt and target text riht after checking for some extra keys such as  backspace or escape
+18. we call this function in wpm_test function in while loop
+19. we set a formulae for wpm calculation in while loop and it is calculating every time we hit any key 
+20.we use try and except for taking care of exception thrown by get key in wpm function
+21. if the use typed an finished the test we show a message for completion and ask for start again.
